@@ -1,13 +1,8 @@
-# Sample Hardhat Project
+# Test task
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Develop a smart contract(-s) on Solidity for deploying a NFT collection (ERC721) with some arguments (name, symbol). The smart contract should emit the following events:
+CollectionCreated(address collection, name, symbol)
+TokenMinted(address collection, address recipient, tokenId, tokenUri)
 
-Try running some of the following tasks:
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+
