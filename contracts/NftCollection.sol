@@ -25,13 +25,14 @@ contract NftCollection is ERC721, ERC721Enumerable {
         emit CollectionCreated(address(this), name, symbol);
     }
 
-    function mint(address recipient) external {
+    function mint(address recipient) external returns(uint256, string memory){
         _counter.increment();
         uint256 tokenId = _counter.current();
         string memory tokenUri = tokenURI(tokenId);
         _mint(recipient, tokenId);
 
         emit TokenMinted(address(this), recipient, tokenId, tokenUri);
+        return(tokenId, tokenUri);
     }
 
     function tokenURI(uint256 tokenId)
